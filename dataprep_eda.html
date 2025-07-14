@@ -28,7 +28,7 @@
           <a href="nn.html">Neural Net</a>
           <a href="conclusions.html">Conclusion</a>
           <a href="aboutme.html">About Me</a>
-          <a href="aboutme.html">References</a>
+          <a href="references.html">References</a>
         </div>
       </div>
     </nav>
@@ -38,13 +38,63 @@
     <section class="section" id="dataprep_eda">
       <h2 class="section-title">Data Prep / EDA</h2>
       <div class="dataprep_eda__container bd-grid">
-        <p>[Describe where and how you collected your data. Include website links or APIs. Explain why you chose this data and what it represents in relation to your topic.]</p>
+        
+        <h3>Data Sources</h3>
+        <ul>
+          <li><strong>NCBI ClinVar (Entrez API)</strong> – Variant-level data focused on repeat expansion conditions.  
+            <br>API base: <a href="https://www.ncbi.nlm.nih.gov/clinvar/" target="_blank">https://www.ncbi.nlm.nih.gov/clinvar/</a>
+            <br>Example endpoint: <code>/esummary.fcgi?db=clinvar&id=12345&retmode=xml</code>
+          </li>
+          <li><strong>Ensembl REST API</strong> – Gene metadata such as symbol, location, transcript count.  
+            <br>API: <a href="https://rest.ensembl.org" target="_blank">https://rest.ensembl.org</a>
+          </li>
+          <li><strong>1000 Genomes Project – Vienna Long-Read Collection</strong>  
+            <br>Download: <a href="https://www.internationalgenome.org/data-portal/data-collection/1kg_ont_vienna" target="_blank">
+              https://www.internationalgenome.org/data-portal/data-collection/1kg_ont_vienna</a>
+          </li>
+        </ul>
 
-        <p>[Show small images of raw and cleaned data — e.g. raw-1.jpg and clean.jpg. Mention what transformations or cleaning steps you applied.]</p>
+        <h3>Why These Sources?</h3>
+        <p>
+          These datasets offer a comprehensive view of both pathogenic variation and normal genomic variation across populations.
+          ClinVar provides clinically relevant variant data, Ensembl supports gene-level annotations, and 1000 Genomes adds population context.
+        </p>
 
-        <p>[Include links to raw and cleaned data files if available. For example: <a href="https://example.com/raw.csv">Raw Data</a>]</p>
+        <h3>Data Snapshots (Raw vs. Cleaned)</h3>
+        <p>Here are small image previews of my raw and cleaned datasets for transparency:</p>
+        <img src="assets/img/raw-data-1.png" alt="Raw Data Example" width="300" />
+        <img src="assets/img/cleaned-data-1.png" alt="Cleaned Data Example" width="300" />
 
-        <p>[Use visualizations or summaries (bar charts, histograms, tables, etc.) to explain your exploration.]</p>
+        <h3>Cleaning Steps</h3>
+        <ul>
+          <li>Removed missing values and NA/NaN fields in ClinVar and Ensembl data.</li>
+          <li>Normalized gene symbols and variant IDs to consistent formatting.</li>
+          <li>Extracted useful columns only (e.g., title, accession, phenotype list).</li>
+          <li>Filtered 1000 Genomes data to retain only VCF fields related to structural variants.</li>
+        </ul>
+
+        <h3>Download Links & Code</h3>
+        <p>
+          - <a href="https://github.com/yourusername/project-code" target="_blank">Code Repository (GitHub)</a>  
+          <br>
+          - <a href="https://drive.google.com/your_raw_file_link" target="_blank">Raw ClinVar Data</a>  
+          <br>
+          - <a href="https://drive.google.com/your_clean_file_link" target="_blank">Cleaned Variant Dataset</a>  
+        </p>
+
+        <h3>Exploratory Visualizations</h3>
+        <p>Below are visualizations summarizing and exploring the cleaned data:</p>
+        <ul>
+          <li><img src="assets/img/clinvar_clinical_significance.png" alt="Bar chart of clinical significance" width="400" /></li>
+          <li><img src="assets/img/phenotype_distribution.png" alt="Phenotype word cloud" width="400" /></li>
+          <li><img src="assets/img/gene_variant_count.png" alt="Bar chart of variants per gene" width="400" /></li>
+          <li><img src="assets/img/variant_length_hist.png" alt="Histogram of variant lengths" width="400" /></li>
+          <li><img src="assets/img/raw_vs_clean_missing.png" alt="Missing data comparison" width="400" /></li>
+          <!-- Add up to 10 images as required -->
+        </ul>
+
+        <p>More visualizations can be found in the linked code repository.</p>
+
       </div>
     </section>
   </main>
