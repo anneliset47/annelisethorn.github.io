@@ -1,0 +1,29 @@
+PopulationCode,PopulationName,Description,SuperpopulationCode,SuperpopulationName
+GWD,Gambian Mandinka,"Gambian in Western Division, The Gambia - Mandinka",AFR,African Ancestry
+MSL,Mende,Mende in Sierra Leone,AFR,African Ancestry
+ESN,Esan,Esan in Nigeria,AFR,African Ancestry
+CLM,Colombian,"Colombian in Medellin, Colombia",AMR,American Ancestry
+PEL,Peruvian,"Peruvian in Lima, Peru",AMR,American Ancestry
+PJL,Punjabi,"Punjabi in Lahore, Pakistan",SAS,South Asian Ancestry
+IBS,Iberian,Iberian populations in Spain,EUR,European Ancestry
+TSI,Toscani,Toscani in Italy,EUR,European Ancestry
+MXL,Mexican Ancestry,"Mexican Ancestry in Los Angeles, California",AMR,American Ancestry
+CHS,Southern Han Chinese,Han Chinese South,EAS,East Asian Ancestry
+KHV,Kinh Vietnamese,"Kinh in Ho Chi Minh City, Vietnam",EAS,East Asian Ancestry
+FIN,Finnish,Finnish in Finland,EUR,European Ancestry
+,Hungarian,Hungarian in Hungary (SGDP),,West Eurasia (SGDP)
+ACB,African Caribbean,African Caribbean in Barbados,AFR,African Ancestry
+PUR,Puerto Rican,Puerto Rican in Puerto Rico,AMR,American Ancestry
+ASW,African Ancestry SW,African Ancestry in Southwest US,AFR,African Ancestry
+BEB,Bengali,Bengali in Bangladesh,SAS,South Asian Ancestry
+CHB,Han Chinese,"Han Chinese in Beijing, China",EAS,East Asian Ancestry
+JPT,Japanese,"Japanese in Tokyo, Japan",EAS,East Asian Ancestry
+YRI,Yoruba,"Yoruba in Ibadan, Nigeria",AFR,African Ancestry
+LWK,Luhya,"Luhya in Webuye, Kenya",AFR,African Ancestry
+CEU,CEPH,Utah residents (CEPH) with Northern and Western European ancestry,EUR,European Ancestry
+CDX,Dai Chinese,"Chinese Dai in Xishuangbanna, China",EAS,East Asian Ancestry
+GIH,Gujarati,"Gujarati Indians in Houston, TX",SAS,South Asian Ancestry
+STU,Tamil,Sri Lankan Tamil in the UK,SAS,South Asian Ancestry
+ITU,Telugu,Indian Telugu in the UK,SAS,South Asian Ancestry
+,Czech,Czech in Czechoslovakia(pre1989) (SGDP),,West Eurasia (SGDP)
+GBR,British,British in England and Scotland,EUR,European Ancestry
