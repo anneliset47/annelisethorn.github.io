@@ -1,0 +1,101 @@
+VariationID,Accession,Gene,Title,ClinicalSignificance,Phenotypes
+3775836,VCV003775836,DMPK,NM_004409.5(DMPK):c.281CAG[81] (p.Thr93_Gly94insAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAla),Likely pathogenic,Bethlem myopathy 1A
+3775779,VCV003775779,ATXN2,NM_001372574.1(ATXN2):c.18GCA[38] (p.Gln28_Pro29insGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGln),Likely pathogenic,Spinocerebellar ataxia type 2
+3764751,VCV003764751,TCEAL4,NC_000023.11:g.103577174dup,Uncertain significance,Spinocerebellar ataxia 7
+3572951,VCV003572951,ACTA2,NC_000010.10:g.90533969_90911342del,Pathogenic,Autoimmune lymphoproliferative syndrome
+3572894,VCV003572894,LOC108663996,NM_003194.5(TBP):c.215_216insGCAACAACAACAGCAGCAGCAGCAGCAGCAGCAGCAGCA (p.Gln95_Ala96insGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGln),Pathogenic,Spinocerebellar ataxia type 17
+3381841,VCV003381841,NAXE,"NAXE, (GGGCC)n REPEAT EXPANSION, PROMOTER",Pathogenic,"Encephalopathy, progressive, early-onset, with brain edema and/or leukoencephalopathy"
+3371940,VCV003371940,ARX,NM_139058.3(ARX):c.419_454del (p.Asp140_Ala151del),Uncertain significance,"Intellectual disability, X-linked, with or without seizures, ARX-related; Developmental and epileptic encephalopathy, 1; not provided"
+3370519,VCV003370519,RFC1,"RFC1, (ACAGG)n REPEAT EXPANSION",Pathogenic,Cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome
+3367132,VCV003367132,GABBR2,NM_005458.8(GABBR2):c.848G>T (p.Gly283Val),Uncertain significance,Neurodevelopmental disorder with poor language and loss of hand skills
+3348471,VCV003348471,LOC110011216,NM_003924.4(PHOX2B):c.741CGCGGCAGCGGCGGCGGCGGC[3] (p.Ala260_Gly261insAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAla),Pathogenic,PHOX2B-related disorder
+3345118,VCV003345118,LOC110011216,NM_003924.4(PHOX2B):c.732_767dup (p.Ala260_Gly261insAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAla),Pathogenic,PHOX2B-related disorder
+3340129,VCV003340129,THAP11,"THAP11, (CAG)n REPEAT EXPANSION",Pathogenic,Spinocerebellar ataxia 51
+3255187,VCV003255187,CACNA1A,NM_001127222.2(CACNA1A):c.492C>G (p.Tyr164Ter),Pathogenic,CACNA1A-related complex neurodevelopmental disorder
+3255145,VCV003255145,FMR1,NM_002024.6(FMR1):c.1375A>T (p.Lys459Ter),Pathogenic,Fragile X syndrome
+3254962,VCV003254962,CACNA1A,NM_001127222.2(CACNA1A):c.3652C>T (p.Pro1218Ser),Uncertain significance,"Developmental and epileptic encephalopathy, 42"
+3248093,VCV003248093,KCNK2,NC_000001.10:g.(?_190829412)_(216061974_?)del,Pathogenic,not provided
+3244832,VCV003244832,ACTA2,NC_000010.10:g.(?_90332640)_(91222335_?)dup,Uncertain significance,Autoimmune lymphoproliferative syndrome type 1
+3242589,VCV003242589,APOOL,GRCh38/hg38 Xp22.33-q28(chrX:2757837-156030895)x2,Pathogenic,Klinefelter syndrome
+3061809,VCV003061809,WDR5,NM_017588.3(WDR5):c.354+2dup,Uncertain significance,Neurodevelopmental disorder
+2671874,VCV002671874,ZFHX3,NM_006885.4:c.10519GGC[42-74],Pathogenic,Spinocerebellar ataxia type 4
+2625352,VCV002625352,LOC110011216,NM_003924.4(PHOX2B):c.747_773dup (p.Ala260_Gly261insAlaAlaAlaAlaAlaAlaAlaAlaAla),Pathogenic,Hereditary cancer-predisposing syndrome
+2584974,VCV002584974,ANK3,NM_020987.5(ANK3):c.9035T>C (p.Ile3012Thr),Uncertain significance,Intellectual disability-hypotonia-spasticity-sleep disorder syndrome
+2584973,VCV002584973,ANK3,NM_020987.5(ANK3):c.11543G>A (p.Gly3848Glu),Uncertain significance,Intellectual disability-hypotonia-spasticity-sleep disorder syndrome
+2577537,VCV002577537,RFC1,NM_002913.5(RFC1):c.2690+1G>A,Pathogenic,Cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome
+2577536,VCV002577536,RFC1,NM_002913.5(RFC1):c.2535+2T>C,Pathogenic,Cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome
+2577535,VCV002577535,RFC1,NM_002913.5(RFC1):c.575del (p.Asn192fs),Pathogenic,Cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome
+2577534,VCV002577534,RFC1,NM_002913.5(RFC1):c.1162C>T (p.Arg388Ter),Pathogenic,Cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome
+2576597,VCV002576597,LOC108663996,NM_003194.5(TBP):c.225GCA[25] (p.Gln95_Ala96insGlnGlnGlnGlnGlnGln),Pathogenic,Spinocerebellar ataxia type 17
+2500234,VCV002500234,LOC110011216,NM_003924.4(PHOX2B):c.745_746insGGCGGCCGCGGC (p.Ala249delinsGlyArgProArgPro),Likely pathogenic,"Neuroblastoma, susceptibility to, 2; Central hypoventilation syndrome, congenital, 1, with or without Hirschsprung disease"
+2500070,VCV002500070,LOC110011216,NM_003924.4(PHOX2B):c.775_776insGGCGGCAGCGGCAGCGGCGGC (p.Ala259delinsGlyArgGlnArgGlnArgArgPro),Pathogenic,"Neuroblastoma, susceptibility to, 2; Central hypoventilation syndrome, congenital, 1, with or without Hirschsprung disease"
+2500068,VCV002500068,PHOX2B,NM_003924.4(PHOX2B):c.778_779insGGCGGCGGCGGCAGCGGCAGCGGCGGCAGC (p.Ala260delinsGlyArgArgArgGlnArgGlnArgArgGlnPro),Pathogenic,"Neuroblastoma, susceptibility to, 2; Central hypoventilation syndrome, congenital, 1, with or without Hirschsprung disease"
+2422293,VCV002422293,ADIPOR1,NC_000001.10:g.(?_200522516)_(208391267_?)dup,Uncertain significance,not provided
+1919465,VCV001919465,HOXD13,NM_000523.4(HOXD13):c.183_203dup (p.Ala71_Ser72insAlaAlaAlaAlaAlaAlaAla),Pathogenic,HOXD13-related disorder; not provided
+1809264,VCV001809264,C1orf21,GRCh37/hg19 1q25.3-32.3(chr1:181453460-213107248)x3,Pathogenic,not provided
+1806479,VCV001806479,FGF14,NG_008317.3:g.245717TTC[250_?],Pathogenic,"Spinocerebellar ataxia 27B, late-onset"
+1760500,VCV001760500,LOC110011216,NM_003924.4(PHOX2B):c.776_777insGGCGGCCGCGGCAGCGGCGGC (p.Ala260_Gly261insAlaAlaAlaAlaAlaAlaAla),Pathogenic,Hereditary cancer-predisposing syndrome
+1760499,VCV001760499,LOC110011216,NM_003924.4(PHOX2B):c.774_776GGC[3]AGCGGCAGCGGAGGC[1] (p.Ala260_Gly261insAlaAlaAlaAlaGluAlaAla),Likely pathogenic,Hereditary cancer-predisposing syndrome
+1758788,VCV001758788,LOC110011216,NM_003924.4(PHOX2B):c.741_761dup (p.Ala260_Gly261insAlaAlaAlaAlaAlaAlaAla),Pathogenic,Hereditary cancer-predisposing syndrome
+1758614,VCV001758614,LOC110011216,NM_003924.4(PHOX2B):c.738_767dup (p.Ala260_Gly261insAlaAlaAlaAlaAlaAlaAlaAlaAlaAla),Pathogenic,Hereditary cancer-predisposing syndrome
+1758455,VCV001758455,LOC110011216,NM_003924.4(PHOX2B):c.735_767dup (p.Ala260_Gly261insAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAla),Pathogenic,Hereditary cancer-predisposing syndrome
+1758454,VCV001758454,LOC110011216,NM_003924.4(PHOX2B):c.735_746dup (p.Ala260_Gly261insAlaAlaAlaAla),Pathogenic,Hereditary cancer-predisposing syndrome
+1758319,VCV001758319,LOC110011216,NM_003924.4(PHOX2B):c.732_746dup (p.Ala260_Gly261insAlaAlaAlaAlaAla),Pathogenic,Hereditary cancer-predisposing syndrome
+1758106,VCV001758106,LOC110011216,NM_003924.4(PHOX2B):c.729_764dup (p.Ala260_Gly261insAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAla),Pathogenic,Hereditary cancer-predisposing syndrome
+1757963,VCV001757963,LOC110011216,NM_003924.4(PHOX2B):c.726_764dup (p.Ala260_Gly261insAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAlaAla),Pathogenic,Hereditary cancer-predisposing syndrome
+1710296,VCV001710296,FGF14,NG_008317.3(FGF14):g.245719CTT[349],Pathogenic,Cerebellar ataxia
+1708464,VCV001708464,PRSS38,GRCh37/hg19 1q31.3-44(chr1:197867914-249224684)x3,Pathogenic,See cases
+1703247,VCV001703247,RFC1,NM_002913.5(RFC1):c.1147C>T (p.Arg383Ter),Pathogenic/Likely pathogenic,Cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome
+1687507,VCV001687507,HTT,NM_001388492.1(HTT):c.54GCA[40] (p.Gln18_Gln38dup),Likely pathogenic,Huntington disease
+1451293,VCV001451293,HOXD13,NM_000523.4(HOXD13):c.186_212dup (p.Ala63_Ala71dup),Pathogenic,not provided; HOXD13-related disorder
+1409896,VCV001409896,ANKRD45,NC_000001.10:g.(?_171605065)_(173962123_?)dup,Uncertain significance,Autoimmune lymphoproliferative syndrome type 1
+1367461,VCV001367461,ANKRD45,NC_000001.10:g.(?_171605065)_(173962123_?)del,Pathogenic,Autoimmune lymphoproliferative syndrome type 1
+1344570,VCV001344570,LOC130009110,NC_000012.12:g.123533750CGG[40_1000],Pathogenic,Oculopharyngodistal myopathy 4
+1341307,VCV001341307,ADAMTS9,GRCh37/hg19 3p14.2-13(chr3:59332508-70686155)x1,Pathogenic,not provided
+1323446,VCV001323446,LOC110011216,NM_003924.4(PHOX2B):c.726_743dup (p.Ala255_Ala260dup),Pathogenic,Hereditary cancer-predisposing syndrome; not provided
+1306285,VCV001306285,NOTCH1,NM_017617.5(NOTCH1):c.6377G>C (p.Gly2126Ala),Conflicting classifications of pathogenicity,not specified; Adams-Oliver syndrome 5; not provided
+1202627,VCV001202627,HOXA13,NM_000522.5(HOXA13):c.360_377dup (p.Ala133_Ser134insAlaAlaAlaAlaAlaAla),Pathogenic/Likely pathogenic,Hand-foot-genital syndrome
+1189761,VCV001189761,DNM1L,NM_012062.5(DNM1L):c.2094TCT[1] (p.Leu700del),Likely pathogenic,DNM1L-related movement disorder; not provided
+1070790,VCV001070790,ARX,NM_139058.3(ARX):c.303_323dup (p.Ala109_Ala115dup),Pathogenic/Likely pathogenic,"Intellectual disability, X-linked, with or without seizures, ARX-related; Developmental and epileptic encephalopathy, 1; Developmental and epileptic encephalopathy, 1; not provided"
+1065563,VCV001065563,FXN,NM_000144.5(FXN):c.165+1338AAG[180],Pathogenic,Friedreich ataxia 1
+1050334,VCV001050334,ATXN3,NM_004993.6(ATXN3):c.892CAG[17] (p.Gln305_Gly306insGlnGlnGlnGlnGlnGlnGlnGlnGln),Benign,not provided; not specified
+1050021,VCV001050021,LOC108663987,NM_004993.6(ATXN3):c.892CAG[21] (p.Gln305_Gly306insGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGln),Benign,not specified
+1003645,VCV001003645,ANGPTL1,NC_000001.10:g.(?_130980840)_(248900000_?)dup,Uncertain significance,Parathyroid carcinoma; Paragangliomas 3; Gastrointestinal stromal tumor
+992598,VCV000992598,WDR7,NC_000018.10:g.57024495GTTATGTCCCTTAYAGRATTTCACAWATCCCTATTCTCAGRCAGGAATAGGGATATGTGARCTATGRTA[7_86],Uncertain significance,not provided
+986849,VCV000986849,LOC110011216,NM_003924.4(PHOX2B):c.741_758dup (p.Ala255_Ala260dup),Pathogenic/Likely pathogenic,"Hereditary cancer-predisposing syndrome; Congenital central hypoventilation; not provided; Central hypoventilation syndrome, congenital, 1, with or without Hirschsprung disease"
+986302,VCV000986302,RFC1,NC_000004.12:g.39348425AAAGG[10_25]AAGGG[n],Pathogenic,Cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome
+984933,VCV000984933,PHOX2B,NM_003924.4(PHOX2B):c.325del (p.Gln109fs),Likely pathogenic,"Congenital central hypoventilation syndrome, with or without Hirschsprung disease"
+984923,VCV000984923,LOC110011216,NM_003924.4(PHOX2B):c.738_776dup (p.Ala248_Ala260dup),Pathogenic,Congenital central hypoventilation; Hereditary cancer-predisposing syndrome
+978416,VCV000978416,PABPN1,NM_004643.3:c.3GGC[(8_13)],Pathogenic,Oculopharyngeal muscular dystrophy 1
+975105,VCV000975105,AFF2,NM_002025.4(AFF2):c.3448G>T (p.Asp1150Tyr),Pathogenic,FRAXE
+972964,VCV000972964,CAMSAP2,GRCh37/hg19 1q31.3-32.2(chr1:194356425-210988710)x3,not provided,not provided
+972742,VCV000972742,GIPC1,NM_005716.4:c.-211GGC[(73_?)],Pathogenic,Oculopharyngodistal myopathy 2
+948359,VCV000948359,ZFYVE26,NM_015346.4(ZFYVE26):c.3022C>T (p.Arg1008Ter),Pathogenic/Likely pathogenic,Hereditary spastic paraplegia 15; Spastic paraplegia
+929858,VCV000929858,ATXN2,NM_002973.4(ATXN2):c.16CAG[33_?] (p.6Gln[33_?]),Pathogenic; risk factor,"Spinocerebellar ataxia type 2; Parkinson disease, late-onset"
+916250,VCV000916250,HOXD13,NM_000523.4(HOXD13):c.212_213insGGCGGCTGCGGCGGCGGCAGCGGCAGC (p.Ala63_Ala71dup),Pathogenic,Synpolydactyly type 1; not provided
+881854,VCV000881854,SGCG,NM_000231.3(SGCG):c.392A>G (p.Lys131Arg),Uncertain significance,Sarcoglycanopathy; Autosomal recessive limb-girdle muscular dystrophy type 2C
+832890,VCV000832890,STAMBPL1,NC_000010.11:g.(?_88770845)_(89328078_?)del,Pathogenic,Autoimmune lymphoproliferative syndrome type 1
+816482,VCV000816482,ABCB10,GRCh37/hg19 1q32.1-44(chr1:204045948-249218992)x3,Pathogenic,See cases
+804370,VCV000804370,TMX2-CTNND1,NM_015959.4(TMX2):c.614G>A (p.Arg205Gln),Conflicting classifications of pathogenicity,"Abnormality of the nervous system; Neurodevelopmental disorder with microcephaly, cortical malformations, and spasticity; not provided"
+802070,VCV000802070,LOC110011216,NM_003924.4(PHOX2B):c.741_755dup (p.Ala256_Ala260dup),Pathogenic,Congenital central hypoventilation; Hereditary cancer-predisposing syndrome
+694503,VCV000694503,YEATS2,NG_054747.1:g.(19392_19426)TTTTA[(7_?)]TTTCA[(n)],Pathogenic,"Epilepsy, familial adult myoclonic, 4"
+694447,VCV000694447,STARD7,NC_000002.12:g.96197067AAAAT[(n)]/AAATG[(n)],Pathogenic,"Epilepsy, familial adult myoclonic, 2"
+694446,VCV000694446,MARCHF6,NC_000005.10:g.10356348_10356407TTTTA[(9_?)]TTTCA[(791_1035)],Pathogenic,"Epilepsy, familial adult myoclonic, 3"
+692233,VCV000692233,LOC130000954,NM_013437.5:c.-102CGG[(90_?)],Pathogenic,Amyotrophic lateral sclerosis 28; Oculopharyngodistal myopathy 1
+692219,VCV000692219,NUTM2B-AS1,NR_120611.1:n.192CCG[(35_?)],Pathogenic,Oculopharyngeal myopathy with leukoencephalopathy 1
+692155,VCV000692155,SLC25A24,NM_013386.5(SLC25A24):c.758G>C (p.Gly253Ala),Likely pathogenic,Dementia; Bilateral tonic-clonic seizure
+691867,VCV000691867,NOTCH2NLC,NM_001364012.2:c.-164GGC[(66_517)],Pathogenic,"Tremor, hereditary essential, 6; Oculopharyngodistal myopathy 3; Neuronal intranuclear inclusion disease"
+685144,VCV000685144,ABCB10,GRCh37/hg19 1q25.3-44(chr1:182388773-249111240)x3,Pathogenic,not provided
+635132,VCV000635132,STARD7,NM_020151.3(STARD7):c.291-1572_291-1518ATTTT[376]ATTTC[274],Pathogenic,"Epilepsy, familial adult myoclonic, 2"
+626336,VCV000626336,GLS,NM_014905.5(GLS):c.923dup (p.Tyr308Ter),Pathogenic,"Global developmental delay, progressive ataxia, and elevated glutamine"
+626335,VCV000626335,LOC129935268,NM_014905.5(GLS):c.-212GCA[680],Pathogenic,"Global developmental delay, progressive ataxia, and elevated glutamine"
+626311,VCV000626311,ATXN7,NM_001377405.1(ATXN7):c.89AGC[233] (p.Gln39_Pro40insGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGlnGln),Pathogenic,Spinocerebellar ataxia 7
+625877,VCV000625877,RFC1,NC_000004.12:g.39348425_39348479delinsAAAGG[400_2000],Pathogenic,Cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome
+625876,VCV000625876,RFC1,NC_000004.11:g.39350045_39350099delinsAAGGG[(400_2000)],Pathogenic,Cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome
+625839,VCV000625839,RFC1,NC_000004.12:g.39348425AARRG[(400_2000)],Pathogenic,Cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome
+619182,VCV000619182,XYLT1,NW_019805500.1:g.472169CCG[(100-833)],Pathogenic,Desbuquois dysplasia 2
+617924,VCV000617924,PUM1,NM_001020658.2(PUM1):c.3103A>T (p.Thr1035Ser),Conflicting classifications of pathogenicity,Late-onset spinocerebellar ataxia; not provided
+590267,VCV000590267,ATN1,NG_008047.1:g.17267CAG[(54-68)],Pathogenic,Dentatorubral-pallidoluysian atrophy
+590253,VCV000590253,FMR1,NM_002024.6(FMR1):c.797G>A (p.Gly266Glu),Likely pathogenic,Inborn genetic diseases
+562101,VCV000562101,ATXN8,NR_002717.2(ATXN8OS):n.1103CTG[(107_127)],Pathogenic; risk factor,"Parkinson disease, late-onset; Spinocerebellar ataxia type 8"
+562100,VCV000562100,ATXN7,NG_008227.1:g.53130CAG[38_130],Pathogenic,Spinocerebellar ataxia 7
