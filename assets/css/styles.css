@@ -535,23 +535,4 @@ p {
   margin-bottom: 1.5rem;
 }
 
-.visualizations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.visualizations-grid figure {
-  margin: 0;
-  text-align: center;
-}
-
-.visualizations-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
 
