@@ -39,35 +39,68 @@
     <section class="section" id="pca">
       <h2 class="section-title">Principal Component Analysis (PCA)</h2>
       <div class="pca__container bd-grid">
-
         <h3>Overview</h3>
         <p>
-          [Explain what PCA is — and why it's used to reduce dimensionality in datasets. Describe how you plan to use it in your project to identify patterns or simplify data.]
+        Principal Component Analysis (PCA) is a linear dimensionality reduction technique that transforms a dataset with possibly correlated variables into a new set of uncorrelated variables known as principal components.
+        Each component captures as much variance from the data as possible.
+        At the core of PCA are eigenvalues and eigenvectors of the data's covariance matrix. Eigenvectors determine the direction of the new feature space (principal components), while eigenvalues tell us how much variance is explained by each component.
+        Dimensionality reduction is crucial when dealing with high-dimensional datasets. It simplifies modeling, improves visualization, and reduces overfitting by retaining only the most informative components. PCA is especially helpful when many features are noisy or correlated.
         </p>
-        </p>
+        <div class="image-row">
+        <img src="assets/img/pca_variance.png" alt="PCA Variance Explained" width="300" />
+        <img src="assets/img/pca_projection.png" alt="PCA Projection Concept" width="300" />
+        </div>
 
-        <h3>Data</h3>
+        <!-- (b) Data Prep -->
+        <h3>Data Preparation</h3>
         <p>
-          [Explain which dataset you're using for PCA, and what the dependent and independent variables are. Include a small image of the dataset used for this method.]<br>
-          <a href="LINK_TO_RAW_DATA" target="_blank">Raw Data</a> |
-          <a href="LINK_TO_CLEAN_DATA" target="_blank">Clean Data</a>
+        PCA requires numeric, standardized, unlabeled data. In this project, PCA is applied to the cleaned Ensembl repeat data like repeat length and strand orientation. All features were scaled before PCA was performed.
         </p>
+        <p>
+        <a href="assets/data/sample_pca_data.csv" target="_blank">Download sample PCA dataset</a>
+        </p>
+        <img src="assets/img/pca_sample_data.png" alt="PCA Sample Data" width="500" />
 
+        <!-- (c) Code -->
         <h3>Code</h3>
         <p>
-          [Link to the code you wrote for PCA analysis.<br>
-          <a href="LINK_TO_CODE" target="_blank">View PCA Code</a>
+        The PCA implementation was done in Python using <code>scikit-learn</code>. The full code is available in the GitHub repo linked below.
         </p>
+        <p>
+        <a href="https://github.com/anneliset47/annelisethorn.github.io/blob/main/Code/pca_analysis.py" target="_blank">View PCA Code on GitHub</a>
+        </p>
+        <pre><code class="language-python">
+    from sklearn.decomposition import PCA
+    from sklearn.preprocessing import StandardScaler
 
+    # Scale the features
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
+
+    # Apply PCA
+    pca = PCA(n_components=2)
+    X_pca = pca.fit_transform(X_scaled)
+
+    print("Explained variance ratio:", pca.explained_variance_ratio_)
+        </code></pre>
+
+        <!-- (d) Results -->
         <h3>Results</h3>
         <p>
-          [Summarize your model results — coefficients, R-squared, RMSE, residual plots, etc. Interpret what these values mean in relation to your topic. Include graphs or visual output if applicable.]
+        The PCA transformed the dataset into two principal components that capture the majority of the variance. Below are visualizations of the variance explained and the projection of data points onto the first two principal components.
         </p>
-      </div>
-    </section>
-  </main>
+        <img src="assets/img/pca_variance_ratio_plot.png" alt="Explained Variance Ratio" width="500" />
+        <img src="assets/img/pca_scatter_plot.png" alt="PCA Projection Scatter" width="500" />
 
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+        <p>
+        The explained variance plot shows that the first component captures the majority of the signal, while the scatter plot reveals natural groupings or gradients in the data. These groupings may correspond to different repeat types or chromosomes.
+        </p>
+
+        <!-- (e) Conclusions -->
+        <h3>Conclusions</h3>
+        <p>
+        PCA revealed the dominant dimensions of variability in the tandem repeat dataset. It reduced complexity while preserving important structure, enabling easier visualization and interpretation. This helps inform downstream tasks such as clustering or classification by identifying key features.
+        </p>
+
+    </div>
+    </section>
