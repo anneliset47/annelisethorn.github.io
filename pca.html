@@ -38,17 +38,35 @@
     <section class="section" id="pca">
       <h2 class="section-title">Principal Component Analysis (PCA)</h2>
       <div class="pca__container bd-grid">
+        <!-- (a) Overview -->
         <h3>Overview</h3>
         <p>
-        Principal Component Analysis (PCA) is a linear dimensionality reduction technique that transforms a dataset with possibly correlated variables into a new set of uncorrelated variables known as principal components.
-        Each component captures as much variance from the data as possible.
-        At the core of PCA are eigenvalues and eigenvectors of the data's covariance matrix. Eigenvectors determine the direction of the new feature space (principal components), while eigenvalues tell us how much variance is explained by each component.
-        Dimensionality reduction is crucial when dealing with high-dimensional datasets. It simplifies modeling, improves visualization, and reduces overfitting by retaining only the most informative components. PCA is especially helpful when many features are noisy or correlated.
+          Principal Component Analysis (PCA) is a linear dimensionality reduction technique that transforms a dataset with possibly correlated variables into a new set of uncorrelated variables known as principal components.
+          Each component captures as much variance from the data as possible.
+          At the core of PCA are eigenvalues and eigenvectors of the data's covariance matrix. Eigenvectors determine the direction of the new feature space (principal components), while eigenvalues tell us how much variance is explained by each component.
+          Dimensionality reduction is crucial when dealing with high-dimensional datasets. It simplifies modeling, improves visualization, and reduces overfitting by retaining only the most informative components. PCA is especially helpful when many features are noisy or correlated.
         </p>
-        <div class="image-row">
-        <img src="assets/img/pca.png" alt="PCA Variance Explained" width="300" />
-        <img src="assets/img/Eigenvalues.png" alt="PCA Projection Concept" width="300" />
+
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: stretch;">
+
+          <!-- Figure 1 -->
+          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
+            <img src="assets/img/pca.png" alt="PCA Variance Explained" style="height: 250px;" />
+            <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
+              <strong>Figure 1:</strong> PCA variance distribution. This chart shows how much of the dataset’s total variance is explained by each principal component, helping decide how many components to retain.
+            </figcaption>
+          </figure>
+
+          <!-- Figure 2 -->
+          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
+            <img src="assets/img/Eigenvalues.png" alt="PCA Projection Concept" style="height: 250px;" />
+            <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
+              <strong>Figure 2:</strong> PCA concept illustration. A visual example of projecting high-dimensional data onto principal components to simplify structure while preserving relationships.
+            </figcaption>
+          </figure>
+
         </div>
+
 
         <!-- (b) Data Prep -->
         <h3>Data Preparation</h3>
