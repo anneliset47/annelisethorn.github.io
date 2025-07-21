@@ -93,7 +93,8 @@
         <!-- (e) Conclusions -->
         <h3>Conclusions</h3>
         <p>
-          Clustering helped uncover structure in the repeat variant data, showing that certain repeat types and lengths tend to group together, which may reflect different classes of genomic behavior or clinical importance. This exploratory step informed feature engineering and potential subgroup targeting in downstream classification tasks.
+          Principal Component Analysis (PCA) successfully reduced the tandem repeat dataset to two main components while preserving nearly all of its original variance. This strong retention suggests that key features, like repeat length and strand orientation, play a major role in explaining the structure of the data. When visualized, the PCA projection showed clear separation between data points, which supports the idea that the dataset is well-organized and a good fit for unsupervised learning methods such as clustering.
+          The way the clusters appeared in PCA space also aligned with the subgroup patterns identified by both K-Means and hierarchical clustering. In this way, PCA not only made the dataset easier to interpret and visualize but also helped highlight important patterns that differentiate different repeat regions. These results reinforce the value of dimensionality reduction in genomic feature analysis and lay the groundwork for future predictive modeling with clinical data.
         </p>
-    </div>
+      </div>
     </section>
