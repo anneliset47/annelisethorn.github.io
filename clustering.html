@@ -71,26 +71,29 @@
         </p>
 
         <!-- (d) Results -->
-        <h3>Results</h3>
-        <p>
-          Below is a dendrogram showing hierarchical clustering results, along with cluster visualizations from K-Means using different values of <code>k</code>.
-        </p>
-        <img src="assets/img/dendrogram_hclust.png" alt="Hierarchical Dendrogram" width="500" />
-        <img src="assets/img/kmeans_cluster_plot.png" alt="K-Means Cluster Plot" width="500" />
+        <h3>Clustering Results</h3>
 
-        <p>
-          We tried <code>k = 2, 3, 4, 5</code>. The silhouette analysis (shown below) indicated that <strong>k=3</strong> yielded the most distinct clusters.
-        </p>
-        <img src="assets/img/silhouette_scores.png" alt="Silhouette Score Plot" width="400" />
+        <figure>
+          <img src="assets/img/silhouette_scores_sampled.png" alt="Silhouette Scores for K-Means" />
+          <figcaption>
+            <strong>Silhouette Scores for K-Means</strong><br>
+            Compared k=2 through k=5. Best score observed at k=5.
+          </figcaption>
+        </figure>
 
-        <p>
-          The hierarchical clustering suggested a similar grouping structure, also supporting <strong>3 clusters</strong> based on the dendrogram cut line. Overall, K-Means and H-Clust produced compatible clusters with similar biological interpretations.
-        </p>
+        <figure>
+          <img src="assets/img/hierarchical_dendrogram.png" alt="Hierarchical Clustering Dendrogram" />
+          <figcaption>
+            <strong>Hierarchical Clustering Dendrogram</strong><br>
+            Dendrogram using cosine similarity and average linkage.<br>
+            Provides insight into natural groupings among repeat sequences.
+          </figcaption>
+        </figure>
 
         <!-- (e) Conclusions -->
         <h3>Conclusions</h3>
         <p>
-          Clustering helped uncover structure in the repeat variant data, showing that certain repeat types and lengths tend to group together — which may reflect different classes of genomic behavior or clinical importance. This exploratory step informed feature engineering and potential subgroup targeting in downstream classification tasks.
+          Clustering helped uncover structure in the repeat variant data, showing that certain repeat types and lengths tend to group together, which may reflect different classes of genomic behavior or clinical importance. This exploratory step informed feature engineering and potential subgroup targeting in downstream classification tasks.
         </p>
 
       </div>

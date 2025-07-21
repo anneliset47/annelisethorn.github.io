@@ -69,24 +69,25 @@
         <p>
         <a href="https://github.com/anneliset47/annelisethorn.github.io/blob/main/Code/PCA.py" target="_blank">View PCA code on GitHub</a>
         </p>
-        
+
         <!-- (d) Results -->
-        <h3>Results</h3>
-        <p>
-        The PCA transformed the dataset into two principal components that capture the majority of the variance. Below are visualizations of the variance explained and the projection of data points onto the first two principal components.
-        </p>
-        <img src="assets/img/pca_variance_ratio_plot.png" alt="Explained Variance Ratio" width="500" />
-        <img src="assets/img/pca_scatter_plot.png" alt="PCA Projection Scatter" width="500" />
+        <h3>PCA Results</h3>
 
-        <p>
-        The explained variance plot shows that the first component captures the majority of the signal, while the scatter plot reveals natural groupings or gradients in the data. These groupings may correspond to different repeat types or chromosomes.
-        </p>
+        <figure>
+        <img src="assets/img/pca_projection_sampled.png" alt="PCA Projection" />
+        <figcaption>
+            <strong>PCA Projection</strong><br>
+            Data projected onto first two principal components.<br>
+            Helps visualize clusters and variance separation.
+        </figcaption>
+        </figure>
 
-        <!-- (e) Conclusions -->
-        <h3>Conclusions</h3>
-        <p>
-        PCA revealed the dominant dimensions of variability in the tandem repeat dataset. It reduced complexity while preserving important structure, enabling easier visualization and interpretation. This helps inform downstream tasks such as clustering or classification by identifying key features.
-        </p>
-
+        <figure>
+        <img src="assets/img/pca_variance_ratio_sampled.png" alt="Explained Variance by PCA Components" />
+        <figcaption>
+            <strong>Explained Variance by PCA Components</strong><br>
+            PC1 explains ~53%, PC2 ~47%. Two components sufficient for strong representation.
+        </figcaption>
+        </figure>
     </div>
     </section>

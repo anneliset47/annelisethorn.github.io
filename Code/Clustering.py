@@ -71,3 +71,12 @@ X['HClust_Cluster'] = h_labels
 
 # Save final combined dataframe
 X.to_csv("kmeans_hclust_clusters.csv", index=False)
+
+# Save denogram plot as png
+plt.figure(figsize=(10, 6))
+dendrogram(linkage_matrix, truncate_mode='level', p=20)
+plt.title("Hierarchical Clustering Dendrogram (cosine, avg linkage)")
+plt.xlabel("Sample Index")
+plt.ylabel("Cosine Distance")
+plt.tight_layout()
+plt.savefig("hierarchical_dendrogram.png")
