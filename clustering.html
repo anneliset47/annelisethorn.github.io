@@ -39,35 +39,76 @@
     <section class="section" id="clustering">
       <h2 class="section-title">Clustering</h2>
       <div class="clustering__container bd-grid">
-
         <h3>Overview</h3>
         <p>
-          [Describe what clustering is (e.g., unsupervised learning, finding patterns/groups), how it works (like k-means or hierarchical clustering), and what you plan to do with your data using this method.]
+          Clustering is an unsupervised learning technique used to group similar data points together based on a distance or similarity metric. The two main types are:
         </p>
-
-        <h3>Data</h3>
+        <ul>
+          <li><strong>Partitional clustering</strong> (e.g., K-Means): Divides the data into non-overlapping subsets.</li>
+          <li><strong>Hierarchical clustering</strong>: Builds a hierarchy of clusters using either bottom-up (agglomerative) or top-down (divisive) approaches.</li>
+        </ul>
         <p>
-          [Show the dataset used for clustering. Include a small screenshot of the cleaned/prepared data.]<br>
-          <a href="LINK_TO_RAW_DATA" target="_blank">Raw Data</a> |
-          <a href="LINK_TO_CLEAN_DATA" target="_blank">Clean Data</a>
+          Distance metrics used include Euclidean distance (K-Means) and Cosine similarity (Hierarchical). In this project, we use clustering to explore structure in repeat mutation data — potentially discovering natural groupings based on repeat type, length, or genomic location.
         </p>
+        <div class="image-row">
+          <img src="assets/img/clustering_overview_1.png" alt="Clustering Concept" width="300" />
+          <img src="assets/img/clustering_overview_2.png" alt="Clustering Types" width="300" />
+        </div>
 
-        <h3>Code</h3>
+        <!-- (b) Data Prep -->
+        <h3>Data Preparation</h3>
         <p>
-          [Link to your clustering code (in Python, R, etc.). Mention libraries used, like `scikit-learn`, `matplotlib`, etc.]<br>
-          <a href="LINK_TO_CODE" target="_blank">View Clustering Code</a>
+          Clustering requires <strong>unlabeled numeric data</strong>. We selected a subset of the cleaned Ensembl tandem repeat dataset, including fields such as repeat length and strand (numerically encoded).
         </p>
+        <p>
+          <a href="assets/data/sample_clustering_data.csv" target="_blank">Download the data sample used for clustering</a>
+        </p>
+        <img src="assets/img/clustering_sample_data.png" alt="Clustering Sample Data" width="500" />
 
+        <!-- (c) Code -->
+        <h3>Clustering Code</h3>
+        <p>We implemented both K-Means and Hierarchical clustering in Python using <code>scikit-learn</code> and <code>scipy</code>. Cosine similarity was used for hierarchical clustering.</p>
+        <pre><code class="language-python">
+    # K-Means clustering
+    from sklearn.cluster import KMeans
+    from sklearn.metrics import silhouette_score
+
+    k_values = [2, 3, 4, 5]
+    for k in k_values:
+        kmeans = KMeans(n_clusters=k, random_state=42).fit(X)
+        score = silhouette_score(X, kmeans.labels_)
+        print(f"k={k}, Silhouette Score={score:.3f}")
+
+    # Hierarchical clustering with cosine similarity
+    from scipy.cluster.hierarchy import linkage, dendrogram
+    from scipy.spatial.distance import pdist
+
+    cosine_dist = pdist(X, metric='cosine')
+    linkage_matrix = linkage(cosine_dist, method='average')
+        </code></pre>
+
+        <!-- (d) Results -->
         <h3>Results</h3>
         <p>
-          [Summarize your findings. How many clusters? What patterns or trends emerged? Include visualizations such as scatter plots or cluster maps. Explain what the results reveal in the context of your topic.]
+          Below is a dendrogram showing hierarchical clustering results, along with cluster visualizations from K-Means using different values of <code>k</code>.
+        </p>
+        <img src="assets/img/dendrogram_hclust.png" alt="Hierarchical Dendrogram" width="500" />
+        <img src="assets/img/kmeans_cluster_plot.png" alt="K-Means Cluster Plot" width="500" />
+
+        <p>
+          We tried <code>k = 2, 3, 4, 5</code>. The silhouette analysis (shown below) indicated that <strong>k=3</strong> yielded the most distinct clusters.
+        </p>
+        <img src="assets/img/silhouette_scores.png" alt="Silhouette Score Plot" width="400" />
+
+        <p>
+          The hierarchical clustering suggested a similar grouping structure, also supporting <strong>3 clusters</strong> based on the dendrogram cut line. Overall, K-Means and H-Clust produced compatible clusters with similar biological interpretations.
+        </p>
+
+        <!-- (e) Conclusions -->
+        <h3>Conclusions</h3>
+        <p>
+          Clustering helped uncover structure in the repeat variant data, showing that certain repeat types and lengths tend to group together — which may reflect different classes of genomic behavior or clinical importance. This exploratory step informed feature engineering and potential subgroup targeting in downstream classification tasks.
         </p>
 
       </div>
     </section>
-  </main>
-
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
