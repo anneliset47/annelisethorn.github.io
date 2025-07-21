@@ -597,6 +597,22 @@ figcaption {
   margin-top: 0.5rem;
 }
 
+.figure-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 0;
+  /* Remove the fixed height and space-between! */
+}
+
+.figure-box figcaption {
+  font-size: 0.95rem;
+  color: #444;
+  text-align: center;
+  margin-top: 0.5rem; /* fine-tune this if needed */
+}
+
 
 
 
