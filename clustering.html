@@ -91,25 +91,29 @@
         <a href="https://github.com/anneliset47/annelisethorn.github.io/blob/main/Code/Clustering.py" target="_blank">View clustering code on GitHub</a>
         </p>
 
-        <!-- (d) Results -->
+        <!-- (d) Clustering Results -->
         <h3>Clustering Results</h3>
 
-        <figure>
-          <img src="assets/img/silhouette_scores_sampled.png" alt="Silhouette Scores for K-Means" />
-          <figcaption>
-            <strong>Silhouette Scores for K-Means</strong><br>
-            Compared k=2 through k=5. Best score observed at k=5.
-          </figcaption>
-        </figure>
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: stretch;">
 
-        <figure>
-          <img src="assets/img/hierarchical_dendrogram.png" alt="Hierarchical Clustering Dendrogram" />
-          <figcaption>
-            <strong>Hierarchical Clustering Dendrogram</strong><br>
-            Dendrogram using cosine similarity and average linkage.<br>
-            Provides insight into natural groupings among repeat sequences.
-          </figcaption>
-        </figure>
+          <!-- Figure 3 -->
+          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
+            <img src="assets/img/silhouette_scores_sampled.png" alt="Silhouette Scores for K-Means" style="max-width: 100%; height: auto;" />
+            <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
+              <strong>Figure 3:</strong> Silhouette scores for K-means clustering. The plot compares clustering performance for values of <em>k</em> from 2 to 5 using silhouette score. The highest score was observed at <em>k</em>=5, suggesting five distinct clusters provide the best separation.
+            </figcaption>
+          </figure>
+
+          <!-- Figure 4 -->
+          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
+            <img src="assets/img/hierarchical_dendrogram.png" alt="Hierarchical Clustering Dendrogram" style="max-width: 100%; height: auto;" />
+            <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
+              <strong>Figure 4:</strong> Hierarchical clustering dendrogram. This tree diagram was generated using cosine similarity and average linkage, highlighting how closely related the tandem repeats are. The large vertical jumps indicate natural breaks between clusters.
+            </figcaption>
+          </figure>
+
+        </div>
+
 
         <!-- (e) Conclusions -->
         <h3>Conclusions</h3>
