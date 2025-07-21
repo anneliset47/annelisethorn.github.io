@@ -586,6 +586,18 @@ figure img {
   margin: 0 auto;
 }
 
+figure {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+figcaption {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+
 
 
 
