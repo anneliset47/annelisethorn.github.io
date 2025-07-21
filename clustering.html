@@ -69,24 +69,6 @@
         <p>
         <a href="https://github.com/anneliset47/annelisethorn.github.io/blob/main/Code/Clustering.py" target="_blank">View clustering code on GitHub</a>
         </p>
-        <pre><code class="language-python">
-    # K-Means clustering
-    from sklearn.cluster import KMeans
-    from sklearn.metrics import silhouette_score
-
-    k_values = [2, 3, 4, 5]
-    for k in k_values:
-        kmeans = KMeans(n_clusters=k, random_state=42).fit(X)
-        score = silhouette_score(X, kmeans.labels_)
-        print(f"k={k}, Silhouette Score={score:.3f}")
-
-    # Hierarchical clustering with cosine similarity
-    from scipy.cluster.hierarchy import linkage, dendrogram
-    from scipy.spatial.distance import pdist
-
-    cosine_dist = pdist(X, metric='cosine')
-    linkage_matrix = linkage(cosine_dist, method='average')
-        </code></pre>
 
         <!-- (d) Results -->
         <h3>Results</h3>
