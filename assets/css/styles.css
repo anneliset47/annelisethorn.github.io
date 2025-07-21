@@ -557,6 +557,35 @@ p {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* ===== CENTERING IMAGES FOR PCA AND CLUSTERING ===== */
+
+/* Shared image row centering */
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+/* Standalone images inside PCA and Clustering sections */
+.pca__container img,
+.clustering__container img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+}
+
+/* Center figure content */
+figure {
+  text-align: center;
+  margin: 2rem auto;
+}
+figure img {
+  display: block;
+  margin: 0 auto;
+}
+
 
 
 
