@@ -77,22 +77,26 @@
         <!-- (d) Results -->
         <h3>PCA Results</h3>
 
-        <figure>
-        <img src="assets/img/pca_projection_sampled.png" alt="PCA Projection" />
-        <figcaption>
-            <strong>PCA Projection</strong><br>
-            Data projected onto first two principal components.
-            This helps visualize clusters and variance separation.
-        </figcaption>
-        </figure>
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: stretch;">
 
-        <figure>
-        <img src="assets/img/pca_variance_ratio_sampled.png" alt="Explained Variance by PCA Components" />
-        <figcaption>
-            <strong>Explained Variance by PCA Components</strong><br>
-            PC1 explains ~53%, PC2 ~47%. Two components sufficient for strong representation.
-        </figcaption>
-        </figure>
+          <!-- Figure 4 -->
+          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
+            <img src="assets/img/pca_projection_sampled.png" alt="PCA Projection" style="max-width: auto; height: 300px;" />
+            <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
+              <strong>Figure 4:</strong> PCA projection of the tandem repeat dataset. Data is transformed onto the first two principal components, revealing structure and separation that supports the presence of meaningful subgroups.
+            </figcaption>
+          </figure>
+
+          <!-- Figure 5 -->
+          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
+            <img src="assets/img/pca_variance_ratio_sampled.png" alt="Explained Variance by PCA Components" style="max-width: auto; height: 300px;" />
+            <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
+              <strong>Figure 5:</strong> Explained variance by principal components. The first two components together capture nearly all of the dataset’s variance, confirming that dimensionality can be reduced without significant information loss.
+            </figcaption>
+          </figure>
+
+        </div>
+
         
         <!-- (e) Conclusions -->
         <h3>Conclusions</h3>
