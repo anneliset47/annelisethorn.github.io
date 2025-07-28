@@ -77,7 +77,9 @@
 
         <!-- (b) Data Preparation -->
         <h3>Data Preparation</h3>
-        <p>Filler text for data preparation section.</p>
+        <p>Supervised machine learning models require labeled data in a structured format. In this case, the label is the pathogenicity of each genetic variant, obtained from the "ClinicalSignificance" column in the ClinVar dataset. The original labels were simplified into two categories: "Pathogenic" and "Non-Pathogenic." Any variant labeled as "Pathogenic," "Likely pathogenic," "Pathogenic/Likely pathogenic," or "Pathogenic; risk factor" was classified as "Pathogenic." All other variants, including those labeled as "Benign" or "Uncertain significance," were grouped under "Non-Pathogenic." 
+        Only records with complete entries for the "Gene" and "Phenotypes" columns were used. These two features were selected for modeling. Since the Multinomial Naive Bayes algorithm requires numerical input, both categorical features were encoded as numeric values using label encoding.
+        After feature extraction and encoding, the dataset was split into training and testing sets. Seventy percent of the data was assigned to the training set, and thirty percent to the testing set. This split was stratified to maintain the original distribution of the label classes. The training set was used to fit the model, while the testing set was reserved for evaluating model performance. These two sets were kept disjoint to ensure an unbiased assessment and prevent data leakage.</p>
 
         <figure style="text-align: center; max-width: 100%; margin: 2rem auto;">
           <img src="assets/img/placeholder_table.png" alt="Placeholder Table Snapshot" style="max-width: 100%; height: 250px;" />
@@ -116,7 +118,9 @@
 
         <!-- (e) Conclusions -->
         <h3>Conclusions</h3>
-        <p>Filler text for conclusions section.</p>
+        <p>The Multinomial Naive Bayes model demonstrated moderate performance in predicting the pathogenicity of genetic variants using only two categorical features: gene and phenotype. An overall accuracy of 67 percent indicates that some predictive signal exists in the selected features. However, the model produced a number of false negatives, which is a limitation when attempting to detect potentially harmful variants.
+        Additional improvements can be made by incorporating more informative features, such as variant type, genomic location, evolutionary conservation, and allele frequency. Further refinements could also include techniques to address class imbalance or the use of more advanced algorithms such as ensemble models or support vector machines.
+        The results show that even a simple model with basic inputs can provide a reasonable starting point for predicting variant pathogenicity. However, a more comprehensive feature set is necessary to improve accuracy and reliability in a real-world application.</p>
 
       </div>
     </section>
