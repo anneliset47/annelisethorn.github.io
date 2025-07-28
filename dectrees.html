@@ -39,21 +39,30 @@
 
         <!-- (a) Overview -->
         <h3>Overview</h3>
-        <p>Filler text for overview section.</p>
+        <p>A decision tree is a model that makes predictions by asking a series of questions based on features in the data.
+        It begins at the top, called the root, and moves down the branches by choosing paths based on the answers until it reaches a leaf node that provides the final prediction.
+        Decision trees are popular because they are easy to understand and can be used for both classification and regression tasks.
+        During training, the model figures out the best questions to ask by looking for features that split the data into the purest possible groups, where purity means that most or all items in a group belong to the same class.
+        To decide how good a split is, the model uses a splitting criterion like Gini impurity or entropy.
+        Gini impurity measures how often a randomly chosen item would be incorrectly labeled if labels were assigned at random based on the class distribution, with a value of 0 meaning perfect purity.
+        Entropy also measures how mixed the classes are and is used to calculate information gain, which shows how much uncertainty is reduced by a split.
+        A higher information gain means a better split, so the model selects features that give the greatest gain.
+        Once trained, the model makes predictions by checking values of features at each node and moving through the tree until a final decision is reached.
+        This process allows the tree to classify new data based on the patterns it learned during training.</p>
 
         <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: stretch;">
 
           <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
-            <img src="assets/img/placeholder1.png" alt="Placeholder 1" style="height: 250px;" />
+            <img src="assets/img/decisiontree1.png" alt="Decision Tree 1" style="height: 250px;" />
             <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
-              <strong>Figure 1:</strong> Caption for placeholder figure 1.
+              <strong>Figure 1:</strong> Visual structure of a decision tree. This diagram shows how a decision tree is made up of decision nodes, leaf nodes, and branches. The tree starts at the root node, asks questions at each decision node, and ends at a leaf node that gives the final prediction.
             </figcaption>
           </figure>
 
           <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
-            <img src="assets/img/placeholder2.png" alt="Placeholder 2" style="height: 250px;" />
+            <img src="assets/img/decisiontree2.png" alt="Decision Tree 2" style="height: 250px;" />
             <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
-              <strong>Figure 2:</strong> Caption for placeholder figure 2.
+              <strong>Figure 2:</strong> CComparison of Gini impurity and entropy. This graph shows how both metrics measure the impurity of a dataset. Entropy increases faster than Gini and reaches its maximum when classes are evenly mixed. These values help the tree decide where to split the data.
             </figcaption>
           </figure>
 
