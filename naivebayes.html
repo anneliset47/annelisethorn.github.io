@@ -39,21 +39,37 @@
 
         <!-- (a) Overview -->
         <h3>Overview</h3>
-        <p>Filler text for overview section.</p>
+        <p>Naive Bayes is a type of classification algorithm that uses probability to decide which category something belongs to. 
+          It is based on Bayes’ Theorem and assumes that all features are independent of each other. 
+          This assumption is not always true, but the algorithm still works well in many cases. 
+          Naive Bayes is commonly used for text classification, such as filtering spam emails or detecting the sentiment of a review.
+          Multinomial Naive Bayes is used when the data is made up of counts. A good example is word counts in text documents.
+           During training, the model learns how often each word appears in documents of each category. 
+           When a new document comes in, it checks which words are in it and uses the word frequencies to figure out the most likely category.
+           Sometimes, a word does not appear in the training data for a certain category. If that happens, the model gives it a probability of zero, which can ruin the whole prediction. 
+           Smoothing, such as Laplace smoothing, solves this by adding a small number to each word count. 
+           This makes sure that no probability is ever exactly zero, which helps the model handle new or rare words better.
+           Bernoulli Naive Bayes works differently. It looks at whether a word is present or not, instead of how many times it appears. 
+           This is useful for short texts or cases where just knowing if a word shows up is more helpful than counting how often it does. 
+           Each word becomes a yes or no feature, depending on whether it appears in the text.
+        </p>
 
         <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: stretch;">
 
           <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
-            <img src="assets/img/placeholder1.png" alt="Placeholder 1" style="height: 250px;" />
+            <img src="assets/img/naivebayes1.png" alt="Naive Bayes Flowchart" style="height: 250px;" />
             <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
-              <strong>Figure 1:</strong> Caption for placeholder figure 1.
+              <strong>Figure 1:</strong> Step-by-step flowchart of the Naive Bayes classification process. 
+              The algorithm evaluates each attribute, calculates probabilities based on feature values, updates class likelihoods, and continues through all available attributes before making a final classification decision.
             </figcaption>
           </figure>
 
           <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
-            <img src="assets/img/placeholder2.png" alt="Placeholder 2" style="height: 250px;" />
+            <img src="assets/img/naivebayes2.png" alt="Naive Bayes Smoothing" style="height: 250px;" />
             <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
-              <strong>Figure 2:</strong> Caption for placeholder figure 2.
+              <strong>Figure 2:</strong> Visual explanation of Laplacian smoothing. 
+              This image shows how smoothing can be used to adjust sharp transitions in data. 
+              Although this example focuses on curves, the idea is similar to how smoothing helps in Naive Bayes by preventing zero probabilities.
             </figcaption>
           </figure>
 
