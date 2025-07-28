@@ -70,7 +70,9 @@
 
         <!-- (b) Data Preparation -->
         <h3>Data Preparation</h3>
-        <p>Filler text for data preparation section.</p>
+        <p>Supervised learning methods require labeled datasets structured into features and targets. The dataset used in this project was derived from ClinVar and contains genetic variant records with associated clinical significance. The label, or target variable, was derived from the "ClinicalSignificance" column and was simplified into two categories: "Pathogenic" and "Non-Pathogenic." All entries marked as "Pathogenic," "Likely pathogenic," "Pathogenic/Likely pathogenic," or "Pathogenic; risk factor" were categorized as "Pathogenic." All other designations were grouped as "Non-Pathogenic."
+        Only records with values in both the "Gene" and "Phenotypes" columns were retained. These two columns were selected as features and encoded numerically using label encoding to make them suitable for decision tree modeling.
+        The resulting dataset was divided into a training set and a testing set using a 70/30 split. Stratified sampling was applied to preserve class distribution across both sets. The training set was used exclusively for model construction, while the testing set was used only for evaluation. These sets were kept disjoint to prevent data leakage and ensure objective performance measurement.</p>
 
         <figure style="text-align: center; max-width: 100%; margin: 2rem auto;">
           <img src="assets/img/placeholder_table.png" alt="Placeholder Table Snapshot" style="max-width: 100%; height: 250px;" />
@@ -81,7 +83,8 @@
 
         <!-- (c) Code -->
         <h3>Code</h3>
-        <p>Filler text for code section.</p>
+        <p>The model was implemented in Python using the scikit-learn library. Categorical features were encoded using LabelEncoder, and a DecisionTreeClassifier was trained using the training set. Three versions of the decision tree were created using different depth configurations: a shallow tree (max depth = 2), a medium-depth tree (max depth = 4), and a fully expanded tree with no depth limit.
+        Each model was trained on the same data and evaluated using accuracy and a confusion matrix. The features used were numeric representations of "Gene" and "Phenotypes."</p>
         <p>
           <a href="#" target="_blank">View code on GitHub</a>
         </p>
@@ -109,8 +112,9 @@
 
         <!-- (e) Conclusions -->
         <h3>Conclusions</h3>
-        <p>Filler text for conclusions section.</p>
-
+        <p>The decision tree model successfully learned from categorical inputs to classify pathogenicity of genetic variants with moderate accuracy. The highest-performing model achieved 63 percent accuracy on the test set. The confusion matrix revealed that the model was more likely to predict variants as pathogenic, leading to several false positives.
+        The trees provided interpretability by visualizing how the model made decisions based on the encoded gene and phenotype inputs. Model performance can be improved by including additional biological features such as variant type, conservation scores, or frequency data. Pruning or ensemble techniques like Random Forest may also reduce overfitting and increase generalization.
+        The results suggest that decision tree classifiers can detect meaningful patterns in genomic data when predicting pathogenicity, even with a minimal set of features.</p>
       </div>
     </section>
   </main>
