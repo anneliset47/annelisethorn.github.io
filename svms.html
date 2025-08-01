@@ -41,8 +41,30 @@
 
         <h3>Overview</h3>
         <p>
-          Support Vector Machines (SVMs) are supervised learning models used for classification and svms tasks. They work by finding the hyperplane that best separates different classes in the feature space. In my project, I plan to use SVMs to classify data points into distinct categories based on their features.
+          SVMs are linear separators because they find the best line (or hyperplane) that divides different classes while maximizing the margin between them. This helps improve accuracy and generalization. The dot product is used to measure how similar two vectors are, and in SVMs, it plays a key role in the kernel function. Kernels allow SVMs to handle non-linear data by computing dot products in higher-dimensional spaces.
+          For example, in a 2D plot, if Class A has points like (2, 3) and (4, 5), and Class B has (6, 1) and (8, 2), the SVM draws a line that separates them with the widest possible margin.
         </p>
+
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: stretch;">
+
+          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
+            <img src="assets/img/naivebayes1.png" alt="Naive Bayes Flowchart" style="height: 250px;" />
+            <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
+              <strong>Figure 1:</strong> Step-by-step flowchart of the Naive Bayes classification process. 
+              The algorithm evaluates each attribute, calculates probabilities based on feature values, updates class likelihoods, and continues through all available attributes before making a final classification decision.
+            </figcaption>
+          </figure>
+
+          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
+            <img src="assets/img/naivebayes2.png" alt="Naive Bayes Smoothing" style="height: 250px;" />
+            <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
+              <strong>Figure 2:</strong> Visual explanation of Laplacian smoothing. 
+              This image shows how smoothing can be used to adjust sharp transitions in data. 
+              Although this example focuses on curves, the idea is similar to how smoothing helps in Naive Bayes by preventing zero probabilities.
+            </figcaption>
+          </figure>
+
+        </div>
 
         <h3>Data</h3>
         <p>
