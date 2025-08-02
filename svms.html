@@ -66,15 +66,14 @@
 
         <h3>Data</h3>
         <p>
-          I will be using the [insert dataset name] dataset for this project. The dependent variable will be [insert dependent variable], while the independent variables will include [insert independent variables]. Below is a small image of the dataset used for this method.]<br>
-          <a href="LINK_TO_RAW_DATA" target="_blank">Raw Data</a> |
-          <a href="LINK_TO_CLEAN_DATA" target="_blank">Clean Data</a>
+          This dataset comes from ClinVar and contains records of genetic variants, each labeled based on its clinical significance. For simplicity, the labels were grouped into two categories: Pathogenic (which includes terms like "Pathogenic", "Likely pathogenic", and similar) and Non-Pathogenic (everything else). Any records missing a gene name or title were excluded from the analysis.
+          The features used included the length of the gene name and the title, along with a numerical representation of the gene name. The data was then split into two sets: 70% for training and 30% for testing, using a fixed random seed to ensure consistency. The training set was used to build an SVM model, and the test set was used to evaluate how well the model performed.<br>
         </p>
 
         <h3>Code</h3>
         <p>
-          [Link to the code you wrote for svms analysis. Mention any packages such as `scikit-learn`, `statsmodels`, or `pandas`.]<br>
-          <a href="LINK_TO_CODE" target="_blank">View svms Code</a>
+          The model was implemented in Python using the scikit-learn library. Categorical gene names were encoded using LabelEncoder, and numeric features were derived from the lengths of the "Gene" and "Title" fields. A Support Vector Machine (SVM) classifier with a linear kernel was trained on the prepared dataset. The data was split into training and testing sets, and model performance was evaluated using precision, recall, and F1-score. The goal was to distinguish between pathogenic and non-pathogenic genetic variants based on simple textual and categorical features.<br>
+          <a href="https://github.com/anneliset47/annelisethorn.github.io/blob/main/Code/svms.py" target="_blank">View code on GitHub</a>
         </p>
 
         <h3>Results</h3>
