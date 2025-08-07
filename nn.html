@@ -88,14 +88,14 @@
 
         <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: stretch;">
 
-          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
+          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 800px; margin: 0;">
             <img src="assets/img/nn_confusionmatrix.png" alt="Neural Network Confusion Matrix" style="max-width: auto; height: 400px;" />
             <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
               <strong>Figure 3:</strong> Confusion matrix for the neural network model. The model achieved an overall accuracy of 85 percent, correctly identifying all 17 pathogenic variants in the test set. However, it failed to correctly classify any of the 3 non-pathogenic variants.
             </figcaption>
           </figure>
 
-          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
+          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 800px; margin: 0;">
             <img src="assets/img/nn2.png" alt="Neural Network Classification Report" style="max-width: auto; height: 400px;" />
             <figcaption style="font-size: 0.95rem; color: #444; margin-top: 0.5rem;">
               <strong>Figure 4:</strong> Classification report for the neural network model. The model correctly predicted all 17 pathogenic variants (class 1), but failed to identify any of the 3 non-pathogenic ones (class 0). While overall accuracy was 85%, performance on the minority class was poor, with a precision and recall of 0.00 for non-pathogenic variants.
