@@ -58,17 +58,29 @@
           </figcaption>
         </figure>
 
-        <h3>Data</h3>
+        <!-- (b) Data Preparation -->
+        <h3>Data Preparation</h3>
         <p>
-          [Describe and show the dataset used for training the neural network. Include a screenshot or small image of the processed dataset used for this model.]<br>
-          <a href="LINK_TO_RAW_DATA" target="_blank">Raw Data</a> |
-          <a href="LINK_TO_CLEAN_DATA" target="_blank">Clean Data</a>
+          Neural networks also require labeled, structured data. For this project, the labels came from the "ClinicalSignificance" column in the ClinVar dataset. These labels were simplified into two categories: "Pathogenic" and "Non-Pathogenic." Any variant labeled as "Pathogenic," "Likely pathogenic," or similar was classified as "Pathogenic." All others, including "Benign" and "Uncertain significance," were grouped under "Non-Pathogenic."
+          Only records with a valid gene name were used. The “Gene” column was selected as the main feature for training, and each gene was converted to a numerical format using label encoding. This encoding assigns a unique number to each gene symbol so that the neural network can process it.
+          The dataset was split into a training set and a testing set using an 80/20 split. Stratified sampling was used to keep the ratio of pathogenic to non-pathogenic examples consistent across both sets. The training set was used to train the neural network, while the test set was used to evaluate how well the model generalized to new data. This separation helps avoid data leakage and ensures that performance metrics reflect the model’s ability to handle unseen examples.
         </p>
 
+        <figure style="text-align: center; max-width: 100%; margin: 2rem auto;">
+          <img src="assets/img/sample_data_table_nn.png" alt="Sample Data Table for Neural Network" style="max-width: 100%; height: 250px;" />
+          <figcaption style="font-size: 0.95rem; color: #444; margin-top: 0.5rem;">
+            <strong>Figure 2:</strong> A sample of the dataset used to train the neural network model. Each row represents a genetic variant, its associated gene, and a binary label indicating if it is considered pathogenic.
+          </figcaption>
+        </figure>
+
+        <!-- (c) Code -->
         <h3>Code</h3>
         <p>
-          [Link to the code used for your NN model. Mention frameworks like TensorFlow, Keras, or PyTorch.]<br>
-          <a href="LINK_TO_CODE" target="_blank">View Neural Network Code</a>
+          The neural network was built using Python with the TensorFlow and Keras libraries. The code loads the ClinVar dataset, simplifies the labels, and encodes the gene names as numeric values. It then splits the data into training and testing sets. The neural network has an input layer, two hidden layers with ReLU activation, and an output layer with a sigmoid function to perform binary classification. The model was compiled with the Adam optimizer and trained using binary cross-entropy loss.
+          After training, the model was evaluated on the test set to measure accuracy and generate a classification report. Predictions were thresholded at 0.5 to determine whether the output should be considered “Pathogenic” or “Non-Pathogenic.”
+        </p>
+        <p>
+          <a href="https://github.com/anneliset47/annelisethorn.github.io/blob/main/Code/nn.py" target="_blank">View code on GitHub</a>
         </p>
 
         <h3>Results</h3>
