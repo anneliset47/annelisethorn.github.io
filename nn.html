@@ -83,16 +83,25 @@
           <a href="https://github.com/anneliset47/annelisethorn.github.io/blob/main/Code/nn.py" target="_blank">View code on GitHub</a>
         </p>
 
+        <!-- (d) Results -->
         <h3>Results</h3>
+
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: stretch;">
+
+          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
+            <img src="assets/img/nn_confusionmatrix.png" alt="Neural Network Confusion Matrix" style="max-width: auto; height: 300px;" />
+            <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
+              <strong>Figure 3:</strong> Confusion matrix for the neural network model. The model achieved an overall accuracy of 85 percent, correctly identifying all 17 pathogenic variants in the test set. However, it failed to correctly classify any of the 3 non-pathogenic variants.
+            </figcaption>
+          </figure>
+
+        </div>
+
+        <!-- (e) Conclusions -->
+        <h3>Conclusions</h3>
         <p>
-          [Summarize your findings: model accuracy, loss trends, confusion matrix (if classification), or MAE/MSE (if regression). Include any training/validation curves and interpretations relevant to your topic.]
+          The neural network model achieved an accuracy of 85 percent on the test set, correctly identifying all pathogenic variants. This suggests the model was able to learn meaningful patterns from the gene input feature alone. However, the precision and recall for non-pathogenic variants were both 0.0, indicating that the model failed to recognize any of the non-pathogenic cases.
+          This result highlights a common issue in imbalanced datasets, where the model becomes biased toward the majority class — in this case, pathogenic variants. Although the overall accuracy is high, the model's inability to detect the minority class (non-pathogenic variants) reduces its reliability in a real-world clinical setting.
+          To improve performance, especially for underrepresented classes, future versions of the model could incorporate more features such as variant type, conservation scores, allele frequency, or population-specific data. Balancing the dataset or using techniques like class weighting or synthetic oversampling (e.g., SMOTE) could also help address the bias toward the majority class.
         </p>
 
-      </div>
-    </section>
-  </main>
-
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
