@@ -4,6 +4,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import classification_report
 import tensorflow as tf
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+import matplotlib.pyplot as plt
 
 # Load ClinVar dataset
 df = pd.read_csv('/Users/annelisethorn/Documents/GitHub/annelisethorn.github.io/Datasets/Uncleaned/clinvar_repeat_pathogenic_variants.csv')
@@ -51,3 +53,15 @@ y_pred_probs = model.predict(X_test_np).flatten()
 y_pred = (y_pred_probs > 0.5).astype(int)
 print("\nClassification Report:")
 print(classification_report(y_test_np, y_pred))
+
+# Generate confusion matrix
+cm = confusion_matrix(y_test_np, y_pred)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=["Non-Pathogenic", "Pathogenic"])
+
+# Plot the confusion matrix
+fig, ax = plt.subplots(figsize=(5, 5))
+disp.plot(ax=ax, cmap='Blues', values_format='d')
+plt.title("Neural Network Confusion Matrix")
+plt.tight_layout()
+plt.savefig("nn_confusionmatrix.png")
+# plt.show()
