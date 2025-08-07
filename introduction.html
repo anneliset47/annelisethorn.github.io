@@ -118,34 +118,44 @@
             <li>
               A machine learning model can recognize patterns in genetic data that suggest whether a variant might be harmful. In this project, even simple inputs like the gene name were enough for a model to correctly identify all the harmful variants in the test set. This shows that there is predictive signal in the data and that machine learning can be a useful tool for identifying high-risk variants.
             </li>
+
             <li>
               The gene name turned out to be one of the most helpful features in this case. Some genes are more commonly associated with disease, so just knowing where a variant is located can already offer a lot of information. It is likely that other features like conservation scores or allele frequency would be just as useful or even more informative, but those were not included in this version of the project.
             </li>
+
             <li>
               The neural network performed the strongest in terms of accuracy. It was able to correctly classify all pathogenic variants in the test set. However, it misclassified all of the non-pathogenic ones, which showed that accuracy alone does not always reflect true performance. Other models like Naive Bayes were more balanced, even if they were slightly less accurate.
             </li>
+
             <li>
               Using more features tends to improve performance, especially when they provide new or complementary information. In this project, only a few features were used, and the results suggest that adding more detailed or biologically meaningful features would likely make the predictions more accurate and reliable.
             </li>
+
             <li>
               This was not directly tested, but models trained on a single population may not perform as well on a different group. Variant frequencies can vary across populations, and that could affect how the model behaves. A more balanced training set that includes global diversity would be more likely to generalize well.
             </li>
+
             <li>
               Conservation scores were not used in this version of the project, but they are known to be strong predictors in other studies. Regions of the genome that are conserved across species are more likely to be important, so changes in those regions often signal risk. Including conservation data would probably improve the model’s predictions.
             </li>
+
             <li>
               In the current setup, the only input to the model was the encoded gene name. Even with that, the model picked up on some strong signals. With more features, tools like feature importance plots or SHAP values could be used to figure out which ones have the most impact on the model’s decisions.
             </li>
+
             <li>
               Yes, clustering helped group variants based on shared symptoms. These groupings made it easier to spot patterns in the data that were not obvious just by looking at individual rows. Clustering also helped reveal how some variants might be linked by common traits, which could be helpful for future classification tasks.
             </li>
+
             <li>
               The models were trained only on entries that had complete data. When working with missing or noisy data, performance tends to drop unless the model is designed to handle it. In future versions, strategies like data imputation or more robust architectures could help reduce this problem.
             </li>
+
             <li>
               Variant type was not included as a feature, so this was not tested directly. Still, other studies have shown that models usually perform better on certain types like missense mutations, which tend to have more visible effects. Adding variant type to the feature set would be a useful next step to explore how predictions vary across types.
             </li>
           </ol>
+
       </div>
     </section>
   </main>
