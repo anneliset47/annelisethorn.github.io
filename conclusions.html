@@ -39,27 +39,11 @@
       <div class="conclusions__container bd-grid">
 
         <p>
-          [Write 5+ fully developed paragraphs summarizing your entire data science story. This section must be 100% non-technical. Do not mention algorithms, models, code, or metrics.]
-        </p>
-        
-        <p>
-          [Explain what your topic is about in plain language, who it impacts, what your main takeaways were, and what insights or actions might come from your findings.]
-        </p>
-
-        <p>
-          [Use this section to help someone with no technical background understand what matters and why. Include any meaningful visual aids, like final charts or annotated images.]
-        </p>
-
-        <p>
-          [Mention any limitations or surprises in the data or story that you encountered, and how that might affect your conclusions.]
-        </p>
-
-        <p>
-          [Wrap up by discussing next steps, future exploration ideas, or why this topic should continue to be studied or acted upon.]
-        </p>
-
-        <p>
-          [Optional: Include a thank-you, a personal reflection on the project, or commentary on what you learned.]
+        This project explores whether patterns in genetic data can help predict if a DNA variant is harmful. Genetic variants are small changes in a person's DNA, and while most are harmless, some have been linked to serious health conditions. With the growing amount of genomic data available, there is increasing interest in using that information to help determine which variants might be important. This project focused on variants located in repetitive regions of DNA, which are often more difficult to interpret but may play a role in disease.
+        To investigate this, data was gathered from multiple trusted sources. ClinVar provided expert-reviewed labels for known variants. Ensembl contributed information about where repeats occur in the genome. The 1000 Genomes Project helped show how often each variant appears across different global populations. By combining these sources, the dataset included important details such as the gene affected, the clinical significance of the variant, and how common it is among different groups of people.
+        One of the most surprising results came from a model that only used the gene name as input. Even with just that one feature, it correctly identified all the harmful variants in the test set. However, it also incorrectly labeled the harmless ones as harmful. This shows a common issue in medical data, where there are often more examples of one category than another. In this case, the imbalance led the model to over-predict the majority class, giving the impression of high performance while still making important mistakes.
+        Other parts of the analysis involved grouping variants by shared traits and testing which features seemed most useful for prediction. While these methods revealed some interesting patterns, there were limitations in the data. Several entries were incomplete or inconsistent, and many potentially helpful features were not included in the original sources. These gaps made it harder to build models that work well in every situation, especially when trying to apply them beyond the data used during training.
+        In the future, this work could be improved by including more detailed biological features, such as how conserved a DNA region is across species, or how a change might affect the protein made by a gene. It would also be valuable to test the models on new datasets from other populations to see how well the results carry over. Although this project focused on a small part of a much bigger problem, it shows that useful signals can be found in the data and that computational tools have real potential to support genetic research and decision-making.
         </p>
       </div>
     </section>
