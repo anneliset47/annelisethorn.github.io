@@ -13,7 +13,7 @@
   <header class="l-header">
     <nav class="nav bd-grid">
       <div><a href="index.html" class="nav__logo">Annelise Thorn</a></div>
-    
+
       <div class="dropdown">
         <button class="dropbtn">Menu <i class='bx bx-chevron-down'></i></button>
         <div class="dropdown-content">
@@ -36,80 +36,102 @@
   <main class="l-main">
     <section class="section" id="nn">
       <h2 class="section-title">Neural Network</h2>
-      <div class="nn__container bd-grid">
 
-        <h3>Overview</h3>
-        <p>
-          Neural Networks (NNs) are a type of machine learning model that are loosely inspired by how the human brain works. 
-          They’re made up of layers of connected units called “neurons” that work together to learn patterns in the data. 
-          Each neuron takes in input, does some math on it (like multiplying by a weight and adding a bias), and passes it along to the next layer. 
-          A simple NN has an input layer, one or more hidden layers, and an output layer. 
-          These models are especially useful when the data is complex or when relationships between features aren’t obvious. For example, in image recognition, speech, or text data.
-          During training, the model adjusts its weights using something called backpropagation to reduce errors in its predictions. 
-          Even though the inner workings can get pretty technical, the general idea is that the network learns by making lots of small updates until it gets better at whatever task it’s trying to do.
-        </p>
+      <!-- (a) Overview -->
+      <h3>Overview</h3>
+      <p>
+        Neural Networks (NNs) are layered function approximators loosely inspired by the brain: an input layer feeds one or more hidden layers, which apply weighted sums and nonlinear activation functions, and an output layer produces predictions. For binary classification, a common setup is ReLU in hidden layers and a Sigmoid at the output to produce a probability in [0,1].
+      </p>
+      <figure style="display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:400px;margin:2rem auto;text-align:center;">
+        <img src="assets/img/nn1.png" alt="Basic Neural Network Diagram" style="height:auto;" />
+        <figcaption><strong>Figure 1:</strong> A basic feedforward neural network.</figcaption>
+      </figure>
 
-        <!-- Figure 1 -->
-        <figure style="display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 400px; margin: 2rem auto; text-align: center;">
-          <img src="assets/img/nn1.png" alt="Basic Neural Network Diagram" style="height: auto;" />
-          <figcaption>
-            <strong>Figure 1:</strong> A basic feedforward neural network. 
-            The input layer takes the features, the hidden layer(s) transform them, and the output layer gives a prediction.
+      <!-- (b) Data Preparation -->
+      <h3>Data Preparation</h3>
+      <p>
+        This is a supervised classification task, so labeled data are required. Labels come from ClinVar’s <code>ClinicalSignificance</code> column, simplified into a binary target: any entry containing “pathogenic” is labeled <strong>1 (Pathogenic)</strong>, else <strong>0 (Non-Pathogenic)</strong>. Only records with a valid gene name are used. The feature is the <code>Gene</code> symbol, encoded as an integer (<code>Gene_encoded</code>) for modeling.
+      </p>
+      <p>
+        The dataset is split into <strong>Training</strong> (80%) and <strong>Testing</strong> (20%) sets using <em>stratified</em> sampling to preserve class ratio. These sets are <strong>disjoint</strong> and the split is done <strong>before</strong> model fitting to avoid leakage. Samples of each set are linked and previewed below.
+      </p>
+
+      <p>
+        Download sample data:
+        <a href="assets/data/train_sample.csv" target="_blank">Training sample CSV</a> ·
+        <a href="assets/data/test_sample.csv" target="_blank">Test sample CSV</a>
+      </p>
+
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+        <figure style="max-width:360px;margin:0;">
+          <img src="assets/img/train_sample.png" alt="Training set sample table" style="width:100%;height:auto;">
+          <figcaption><strong>Figure 2a:</strong> Training set (sample rows). Disjoint from test set via stratified split.</figcaption>
+        </figure>
+        <figure style="max-width:360px;margin:0;">
+          <img src="assets/img/test_sample.png" alt="Test set sample table" style="width:100%;height:auto;">
+          <figcaption><strong>Figure 2b:</strong> Test set (sample rows). Held out for unbiased evaluation.</figcaption>
+        </figure>
+      </div>
+
+      <!-- (c) Code -->
+      <h3>Code</h3>
+      <p>
+        The model is implemented in Python using TensorFlow/Keras. The network uses ReLU activations in hidden layers and a Sigmoid output for binary classification, trained with Adam (learning rate = <code>0.001</code>) and binary cross-entropy loss for <code>20</code> epochs (batch size <code>16</code>). The repository code reads the data, creates labels, encodes genes, performs the stratified split, trains, and saves the required figures.
+      </p>
+      <p>
+        <a href="https://github.com/anneliset47/annelisethorn.github.io/blob/main/Code/nn.py" target="_blank">View code on GitHub</a>
+      </p>
+
+      <!-- (d) Results -->
+      <h3>Results</h3>
+      <p>
+        On the held-out test set, the model achieved an accuracy of <strong>85%</strong> at a 0.5 threshold. It correctly identified all Pathogenic variants in the test set but did not identify the Non-Pathogenic ones. This reflects class imbalance and the simplicity of the single-feature representation.
+      </p>
+
+      <div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;align-items:stretch;">
+        <figure style="display:flex;flex-direction:column;align-items:center;max-width:800px;margin:0;">
+          <img src="assets/img/nn_confusionmatrix.png" alt="Neural Network Confusion Matrix" style="max-width:auto;height:400px;" />
+          <figcaption style="font-size:0.95rem;color:#444;text-align:center;margin-top:0.5rem;">
+            <strong>Figure 3:</strong> Confusion matrix (threshold 0.5). Overall accuracy: 85%. All 17 Pathogenic predicted correctly; 3 Non-Pathogenic predicted as Pathogenic.
           </figcaption>
         </figure>
 
-        <!-- (b) Data Preparation -->
-        <h3>Data Preparation</h3>
-        <p>
-          Neural networks also require labeled, structured data. For this project, the labels came from the "ClinicalSignificance" column in the ClinVar dataset. These labels were simplified into two categories: "Pathogenic" and "Non-Pathogenic." Any variant labeled as "Pathogenic," "Likely pathogenic," or similar was classified as "Pathogenic." All others, including "Benign" and "Uncertain significance," were grouped under "Non-Pathogenic."
-          Only records with a valid gene name were used. The “Gene” column was selected as the main feature for training, and each gene was converted to a numerical format using label encoding. This encoding assigns a unique number to each gene symbol so that the neural network can process it.
-          The dataset was split into a training set and a testing set using an 80/20 split. Stratified sampling was used to keep the ratio of pathogenic to non-pathogenic examples consistent across both sets. The training set was used to train the neural network, while the test set was used to evaluate how well the model generalized to new data. This separation helps avoid data leakage and ensures that performance metrics reflect the model’s ability to handle unseen examples.
-        </p>
-
-        <figure style="text-align: center; max-width: 100%; margin: 2rem auto;">
-          <img src="assets/img/sample_data_table_nn.png" alt="Sample Data Table for Neural Network" style="max-width: 100%; height: 250px;" />
-          <figcaption style="font-size: 0.95rem; color: #444; margin-top: 0.5rem;">
-            <strong>Figure 2:</strong> A sample of the dataset used to train the neural network model. Each row represents a genetic variant, its associated gene, and a binary label indicating if it is considered pathogenic.
-          </figcaption>
-        </figure>
-
-        <!-- (c) Code -->
-        <h3>Code</h3>
-        <p>
-          The neural network was built using Python with the TensorFlow and Keras libraries. The code loads the ClinVar dataset, simplifies the labels, and encodes the gene names as numeric values. It then splits the data into training and testing sets. The neural network has an input layer, two hidden layers with ReLU activation, and an output layer with a sigmoid function to perform binary classification. The model was compiled with the Adam optimizer and trained using binary cross-entropy loss.
-          After training, the model was evaluated on the test set to measure accuracy and generate a classification report. Predictions were thresholded at 0.5 to determine whether the output should be considered “Pathogenic” or “Non-Pathogenic.”
-        </p>
-        <p>
-          <a href="https://github.com/anneliset47/annelisethorn.github.io/blob/main/Code/nn.py" target="_blank">View code on GitHub</a>
-        </p>
-
-        <!-- (d) Results -->
-        <h3>Results</h3>
-
-        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: stretch;">
-
-          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 800px; margin: 0;">
-            <img src="assets/img/nn_confusionmatrix.png" alt="Neural Network Confusion Matrix" style="max-width: auto; height: 400px;" />
-            <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
-              <strong>Figure 3:</strong> Confusion matrix for the neural network model. The model achieved an overall accuracy of 85 percent, correctly identifying all 17 pathogenic variants in the test set. However, it failed to correctly classify any of the 3 non-pathogenic variants.
-            </figcaption>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <figure style="max-width:360px;margin:0;">
+            <img src="assets/img/nn_last5_loss.png" alt="Training loss last 5 epochs" style="width:100%;height:auto;">
+            <figcaption><strong>Figure 4a:</strong> Training loss (last 5 epochs). Optimizer: Adam (lr=0.001); Loss: Binary Cross-Entropy.</figcaption>
           </figure>
-
-          <figure style="display: flex; flex-direction: column; align-items: center; max-width: 800px; margin: 0;">
-            <img src="assets/img/nn2.png" alt="Neural Network Classification Report" style="max-width: auto; height: auto;" />
-            <figcaption style="font-size: 0.95rem; color: #444; margin-top: 0.5rem;">
-              <strong>Figure 4:</strong> Classification report for the neural network model. The model correctly predicted all 17 pathogenic variants (class 1), but failed to identify any of the 3 non-pathogenic ones (class 0). While overall accuracy was 85%, performance on the minority class was poor, with a precision and recall of 0.00 for non-pathogenic variants.
-            </figcaption>
+          <figure style="max-width:360px;margin:0;">
+            <img src="assets/img/nn_last5_accuracy.png" alt="Training accuracy last 5 epochs" style="width:100%;height:auto;">
+            <figcaption><strong>Figure 4b:</strong> Training accuracy (last 5 epochs). Hidden activation: ReLU; Output activation: Sigmoid.</figcaption>
           </figure>
-
-
         </div>
 
-        <!-- (e) Conclusions -->
-        <h3>Conclusions</h3>
-        <p>
-          The neural network model achieved an accuracy of 85 percent on the test set, correctly identifying all pathogenic variants. This suggests the model was able to learn meaningful patterns from the gene input feature alone. However, the precision and recall for non-pathogenic variants were both 0.0, indicating that the model failed to recognize any of the non-pathogenic cases.
-          This result highlights a common issue in imbalanced datasets, where the model becomes biased toward the majority class — in this case, pathogenic variants. Although the overall accuracy is high, the model's inability to detect the minority class (non-pathogenic variants) reduces its reliability in a real-world clinical setting.
-          To improve performance, especially for underrepresented classes, future versions of the model could incorporate more features such as variant type, conservation scores, allele frequency, or population-specific data. Balancing the dataset or using techniques like class weighting or synthetic oversampling (e.g., SMOTE) could also help address the bias toward the majority class.
-        </p>
+        <figure style="display:flex;flex-direction:column;align-items:center;max-width:900px;margin:1rem auto 0;">
+          <img src="assets/img/nn_architecture.png" alt="Neural network architecture diagram" style="width:100%;height:auto;">
+          <figcaption style="font-size:0.95rem;color:#444;margin-top:0.5rem;">
+            <strong>Figure 5:</strong> Architecture used: <em>Input (Gene_encoded)</em> → <em>Dense(64, ReLU)</em> → <em>Dense(32, ReLU)</em> → <em>Dense(1, Sigmoid)</em>.
+            Weight matrices \(W^{(1)}, W^{(2)}, W^{(3)}\) and biases \(b^{(1)}, b^{(2)}, b^{(3)}\) connect the layers.
+          </figcaption>
+        </figure>
+      </div>
 
+      <!-- Explicit activation + hyperparameters for reproducibility -->
+      <p style="margin-top:1rem;">
+        <strong>Activation functions:</strong> Hidden = ReLU; Output = Sigmoid. &nbsp;
+        <strong>Optimizer:</strong> Adam (learning rate = 0.001). &nbsp;
+        <strong>Loss:</strong> Binary Cross-Entropy. &nbsp;
+        <strong>Epochs:</strong> 20. &nbsp;
+        <strong>Batch size:</strong> 16.
+      </p>
+
+      <!-- (e) Conclusions -->
+      <h3>Conclusions</h3>
+      <p>
+        Using a single categorical feature (<code>Gene_encoded</code>) with a simple NN achieved 85% accuracy on this split, driven by strong performance on the majority (Pathogenic) class. However, the model failed to identify Non-Pathogenic cases at the default threshold, highlighting the effect of class imbalance and limited features. This baseline shows that the network can memorize patterns associated with particular genes, but reliability for minority outcomes is limited without additional signals or design choices.
+      </p>
+
+    </section>
+  </main>
+</body>
+</html>
