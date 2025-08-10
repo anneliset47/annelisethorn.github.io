@@ -4,8 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
   <title>Neural Networks - Annelise Thorn</title>
+
+  <!-- MathJax for LaTeX in captions (e.g., \(W^{(1)}\)) -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']]
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 <body>
   <!--===== HEADER NAVIGATION =====-->
@@ -44,7 +57,7 @@
 
         <div style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
           <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
-            <img src="assets/img/nn1.png" alt="Basic Neural Network Diagram" style="height: auto;" />
+            <img src="assets/img/nn1.png" alt="Basic Neural Network Diagram" style="height: auto;" loading="lazy" />
             <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
               <strong>Figure 1:</strong> A simple feedforward neural network. Inputs flow through hidden layer(s) to an output that represents a predicted probability.
             </figcaption>
@@ -65,14 +78,14 @@
 
         <div style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
           <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
-            <img src="assets/img/train_sample.png" alt="Training set sample table" style="max-width: 100%; height: auto;" />
+            <img src="assets/img/train_sample.png" alt="Training set sample table" style="max-width: 100%; height: auto;" loading="lazy" />
             <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
               <strong>Figure 2a:</strong> Training set sample (disjoint from test set; stratified split).
             </figcaption>
           </figure>
 
           <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
-            <img src="assets/img/test_sample.png" alt="Test set sample table" style="max-width: 100%; height: auto;" />
+            <img src="assets/img/test_sample.png" alt="Test set sample table" style="max-width: 100%; height: auto;" loading="lazy" />
             <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
               <strong>Figure 2b:</strong> Test set sample (held out for unbiased evaluation).
             </figcaption>
@@ -91,28 +104,28 @@
         <div style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
 
           <figure style="display: flex; flex-direction: column; align-items: center; max-width: 600px; margin: 0;">
-            <img src="assets/img/nn_confusionmatrix.png" alt="Neural Network Confusion Matrix" style="max-width: 100%; height: auto;" />
+            <img src="assets/img/nn_confusionmatrix.png" alt="Neural Network Confusion Matrix" style="max-width: 100%; height: auto;" loading="lazy" />
             <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
               <strong>Figure 3:</strong> Confusion matrix (threshold = 0.5). Overall accuracy: 85%. All 17 Pathogenic were correctly identified; 3 Non-Pathogenic were predicted as Pathogenic.
             </figcaption>
           </figure>
 
           <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
-            <img src="assets/img/nn_last5_loss.png" alt="Training loss last 5 epochs" style="max-width: 100%; height: auto;" />
+            <img src="assets/img/nn_last5_loss.png" alt="Training loss last 5 epochs" style="max-width: 100%; height: auto;" loading="lazy" />
             <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
               <strong>Figure 4a:</strong> Training loss for the last 5 epochs. Optimizer: Adam (lr=0.001); Loss: Binary Cross-Entropy.
             </figcaption>
           </figure>
 
           <figure style="display: flex; flex-direction: column; align-items: center; max-width: 400px; margin: 0;">
-            <img src="assets/img/nn_last5_accuracy.png" alt="Training accuracy last 5 epochs" style="max-width: 100%; height: auto;" />
+            <img src="assets/img/nn_last5_accuracy.png" alt="Training accuracy last 5 epochs" style="max-width: 100%; height: auto;" loading="lazy" />
             <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
               <strong>Figure 4b:</strong> Training accuracy for the last 5 epochs. Hidden activation: ReLU; Output activation: Sigmoid.
             </figcaption>
           </figure>
 
           <figure style="display: flex; flex-direction: column; align-items: center; max-width: 900px; margin: 0;">
-            <img src="assets/img/nn_architecture.png" alt="Neural network architecture diagram" style="max-width: 100%; height: auto;" />
+            <img src="assets/img/nn_architecture.png" alt="Neural network architecture diagram" style="max-width: 100%; height: auto;" loading="lazy" />
             <figcaption style="font-size: 0.95rem; color: #444; text-align: center; margin-top: 0.5rem;">
               <strong>Figure 5:</strong> Architecture used: Input (<code>Gene_encoded</code>) → Dense(64, ReLU) → Dense(32, ReLU) → Dense(1, Sigmoid). Weight matrices \(W^{(1)}, W^{(2)}, W^{(3)}\) and biases \(b^{(1)}, b^{(2)}, b^{(3)}\) connect layers.
             </figcaption>
@@ -127,6 +140,13 @@
       </div>
     </section>
   </main>
+
+  <noscript>
+    <div style="max-width: 800px; margin: 1rem auto; padding: 0.75rem; border: 1px solid #eee; color: #555;">
+      Math notation requires JavaScript. Enable it to render \(W^{(1)}\) etc.
+    </div>
+  </noscript>
+
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="assets/js/main.js"></script>
 </body>
